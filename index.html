@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EnergyIQ - Login</title>
+  <meta name="description" content="Hostel Energy Monitoring System">
+  <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png">
+  <link rel="stylesheet" href="css/style.css?v=15">
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="glass-panel login-card animate-fade-in">
+      <div class="login-content text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png" alt="LPU Logo" style="width: 80px; margin-bottom: 1rem; filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));">
+        <h1 class="brand-title">LPU Energy IQ</h1>
+        <p class="login-subtitle">Smart Hostel Energy Insight</p>
+        
+        <form id="loginForm">
+          <div class="input-group">
+            <label for="roomNumber">Room Number</label>
+            <input type="text" id="roomNumber" placeholder="e.g. 101" required autocomplete="off">
+            <div id="loginError" class="error-msg">Room not found. Try 101.</div>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+            Access Dashboard
+          </button>
+        </form>
+        
+        <div class="mt-4" style="font-size: 0.85rem; color: var(--text-secondary);">
+          <p>Admin? <a href="admin.html" style="color: var(--primary); text-decoration: none;">Open Simulator</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase Scripts (v8 for easy vanilla JS setup) -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  
+  <script src="js/firebase-config.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
